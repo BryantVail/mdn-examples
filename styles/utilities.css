@@ -1,0 +1,7 @@
+.container{
+    /* display */
+        display: flex;
+}
+.box{
+    flex: 1;
+}
