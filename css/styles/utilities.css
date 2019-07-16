@@ -1,0 +1,21 @@
+.container{
+    /* display */
+        display: flex;
+}
+.box{
+    flex: 1;
+}
+
+/* Buttons */
+    .btn {
+        padding: .3rem 1rem .3rem 1rem;
+        border-radius: .35rem;
+        
+    }
+        .btn:hover{
+            cursor: pointer;
+        }
+    .btn-primary{
+        background: var(--primary-color);
+        color: var(--light-color);
+    }

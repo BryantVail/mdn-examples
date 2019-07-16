@@ -1,0 +1,21 @@
+
+
+
+
+
+
+____________________________________________
+
+After checking the state of the request and the HTTP status code of the response, you can do whatever you want with the data the server sent. You have two options to access that data:
+
+    httpRequest.responseText – returns the server response as a string of text
+    httpRequest.responseXML – returns the response as an XMLDocument object you can traverse with JavaScript DOM functions
+
+
+
+
+
+
+
+
+
