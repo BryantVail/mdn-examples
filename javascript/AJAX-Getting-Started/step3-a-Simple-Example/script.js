@@ -27,13 +27,17 @@
 
         //local function
         function alertContents(){
-            if(httpRequest.readyState === XMLHttpRequest.DONE){
-                if(httpRequest.status ===200){
-                    //return text from the resource
-                    alert(httpRequest.responseText);
-                }else{
-                    alert("There was a problem with the request");
-                }
+            try {
+                if(httpRequest.readyState === XMLHttpRequest.DONE){
+                    if(httpRequest.status ===200){
+                        //return text from the resource
+                        alert(httpRequest.responseText);
+                    }else{
+                        alert("There was a problem with the request");
+                    }
+                }//end if
+            } catch (error) {
+                alert("Caught Exception: " + error.description);                
             }
         }//end alertContents
     }//end makeRequest
