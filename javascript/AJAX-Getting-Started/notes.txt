@@ -15,7 +15,24 @@ After checking the state of the request and the HTTP status code of the response
 
 
 
+____________________________________________
+step4-working-with-the-xml-response
+    1. create xml file 
+        -<?xml version="1.0" ?>
+    2. change url for 'makeRequest' function
+        >associated with 'onclick'
+    3. respond specifically to xml: 
+        var xmldoc = httpRequest.responseXML;
+        var root_node = xmldoc.getElementsByTagName('root').item(0);
+        alert(root_node.firstChild.data);
 
 
-
+____________________________________________
+step5-working-with-data
+    i. HTML
+        a. input for name
+    1. send data to the server, 
+    2. receive a response
+        -a computed string 
+    
 

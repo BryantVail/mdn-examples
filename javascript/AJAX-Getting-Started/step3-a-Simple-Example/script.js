@@ -6,9 +6,12 @@
 
 (function(){
     var httpRequest;
-    document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+    document.getElementById("ajaxButton").onclick = function(){
+        let username = document.getElementById('username').value;
+        makeRequest('test.php', username);
+    }
 
-    function makeRequest(){
+    function makeRequest(url, username){
         //initialize XMLHttpRequest object
         httpRequest = new XMLHttpRequest();
 
@@ -21,8 +24,14 @@
         //if above is not true 
         // and the function does not 'return'
         httpRequest.onreadystatechange = alertContents;
-        httpRequest.open('GET', 'test.html');
-        // httpRequest.setRequestHeader('content-type', 'application/text');
+        httpRequest.open('POST', url);
+        httpRequest.setRequestHeader('content-type', '')
+        
+        // set responseType
+        
+        // httpRequest.responseType = "json";
+
+        
         httpRequest.send();
 
         //local function
@@ -31,7 +40,9 @@
                 if(httpRequest.readyState === XMLHttpRequest.DONE){
                     if(httpRequest.status ===200){
                         //return text from the resource
-                        alert(httpRequest.responseText);
+                        let xmldoc = httpRequest.responseXML;
+                        let rootNode = xmldoc.getElementsByTagName("root").item(0);
+                        alert(rootNode.firstChild.data);
                     }else{
                         alert("There was a problem with the request");
                     }

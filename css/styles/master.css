@@ -1,5 +1,24 @@
 :root{
     --primary-color: steelBlue;
     --light-color: #f4f4f4;
-    --dark-color: #ddd3;
+    /* dark gray */
+    --dark-color: #464646;
 }
+
+/* forms */
+    .form-group {
+        margin: .75rem;
+    }
+    .form-group label {
+        padding-bottom: .75rem;
+    }
+    form label {
+        display: block;
+    }
+    form input, 
+    form textarea{
+        width: 100%;
+        padding: .5rem;
+        border-radius: .4rem;
+        border: none;
+    }

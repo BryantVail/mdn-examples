@@ -4,6 +4,8 @@
 }
 .box{
     flex: 1;
+    padding: 1rem;
+    background: var(--primary-color);
 }
 
 /* Buttons */
@@ -19,3 +21,16 @@
         background: var(--primary-color);
         color: var(--light-color);
     }
+    .btn-dark{
+        background: var(--dark-color);
+        color: var(--light-color);
+    }
+        .btn-dark:hover{
+            background: var(--primary-color);
+            color: black;
+            font-weight: bold;
+            border: 
+                .1rem 
+                var(--light-color) 
+                solid;
+        }

@@ -1,0 +1,7 @@
+body{
+    background: var(--dark-color);
+}
+
+.main{
+    padding: 8rem;
+}

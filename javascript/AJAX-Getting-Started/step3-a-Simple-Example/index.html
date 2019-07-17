@@ -9,9 +9,28 @@
         <link rel="stylesheet" href="../../../css/styles/clear.css">
         <link rel="stylesheet" href="../../../css/styles/master.css">
         <link rel="stylesheet" href="../../../css/styles/utilities.css">
+        <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <button id="ajaxButton" class="btn btn-primary">Make a Request</button>
+    <section class="main">
+        <div class="box">
+            <form action="test.php" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="form-group">
+                    <span 
+                        id="ajaxButton" 
+                        class="btn btn-dark">
+                        Make a Request
+                    </span>    
+                </div>
+            </form>
+
+        </div>
+    </section>
+    
     <!-- scripts -->
     <script src="script.js" defer async></script>
 </body>
