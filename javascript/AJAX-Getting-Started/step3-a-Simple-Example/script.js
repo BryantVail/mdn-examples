@@ -24,14 +24,12 @@
         //if above is not true 
         // and the function does not 'return'
         httpRequest.onreadystatechange = alertContents;
+        //url is passed in to fn 'makeRequest'
         httpRequest.open('POST', url);
-        httpRequest.setRequestHeader('content-type', '')
-        
-        // set responseType
-        
-        // httpRequest.responseType = "json";
-
-        
+        httpRequest.setRequestHeader(
+            'content-type', 'application/x-www-form-urlencoded'
+        );
+        //send
         httpRequest.send();
 
         //local function
