@@ -1,0 +1,112 @@
+
+HTTP-General-Authentication-Framework: {
+
+    authentication MUST happen over
+        https (tls) connection to be considered secure
+        types: [
+            basic: most common, 
+
+        ]
+        request: {
+            Authorization: 
+                syntax: 
+                    Authorization: <type> <credentials> (creds are colon delimited)
+            Proxy-Authorization: 
+                syntax:
+                    proxy-authorization: <type> <credentials> 
+
+        },
+        response: {
+            www-Authenticate: 
+                defines the auth method that should be used to gain access to a resource.
+                    -specify which auth scheme is used 
+                syntax: 
+                    WWW-Authenticate: <type> realm=<realm>
+            Proxy-Authenticate: 
+                syntax: 
+                    proxy-authenticate: <type> realm=<realm>
+        }
+        Schemes: {
+            basic: {
+                encryption: base64-encoded
+                definition: rfc-7617, 
+                notes: [
+                    "base64 is a reverseable encoding & https should be used to make it secure.",
+                    "url credential passing is deprecated"
+                ],
+
+
+            }
+                
+            bearer: 
+                bearer tokens to access OAuth 2.0-protected resources
+            digest: 
+                (see RFC 7616, only md5 hashing is supported in Firefox, see bug 472823 for SHA encryption support),
+            HOBA: 
+                "Http Origin-Bound Authentication" 
+                -rfc-7486, section 3
+            Mutual: 
+                rfc 8120
+            AWS4-HMAC-SHA256: 
+                aws docs
+                http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html
+        }
+}, 
+HTTP-Headers-Lesson: {
+    url: "medium.com/@bilalak90/http-headers-101-5392a7eff87b", 
+    examples: [
+        request-headers: {
+            "GET /myblog/ HTTP/1.1
+            //site being requested & optional port number
+            Host: medium.com
+            //usage: [statistical purposes, detecting protocol violations, tailoring responses. ]
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+            Accept-Language: en-us,en;q=0.5
+            Accept-Encoding: gzip, deflate, sdch
+            Accept-Charset: ISO-8859–1,utf-8;q=0.7,*;q=0.7
+            Keep-Alive: 200
+            Connection: keep-alive
+            //stored per URL, 
+            //session cookies used to store data
+            Cookie: PHPSESSID=r2t5uvjq435r4q7ib3vtdjq120
+            Pragma: no-cache
+            Cache-Control: no-cache"
+        },
+        response-headers: {
+            //response line
+            HTTP/1.x 200 OK
+            Transfer-Encoding: chunked
+            Date: Sat, 28 Feb 2016 06:48:30 GMT
+            Server: LiteSpeed
+            Connection: close
+            Pragma: public
+            Expires: Sat, 28 Nov 2009 06:48:30 GMT
+            Etag: "pub125655237;gz"
+            Cache-Control: max-age=3600, public
+            Content-Type: text/html; charset=UTF-8
+            Last-Modified: Sat,15 Dec 2015 03:50:37 GMT
+            X-Pingback: http://medium.com/xmlrpc.php
+            Content-Encoding: gzip
+            Vary: Accept-Encoding, Cookie, User-Agent
+            
+            <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+            <html xmlns=”http://www.w3.org/1999/xhtml">
+            <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <! — … rest of the html … →
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
