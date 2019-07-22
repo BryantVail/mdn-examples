@@ -1,0 +1,71 @@
+//Using CSS Animations
+    Animations: 
+        1. style
+        2. keyframe set for start, end, and other specified 'waypoints'
+    advantages: 
+        1. easy to use for simple animations, 
+        2. run well- 
+            a. even under moderate system load or resource availability. 
+            b. 'frame skipping'; rendering engine can use 'frame skipping' & other techniques to keep performance smooth. 
+        3. browser reduces burden on the system. 
+            a. reduces the frequency of animations in tabs that aren't visible or in use. 
+    Configure the Animation: 
+        1. animation property: 
+            a. style the element to be animated
+                i. 'timing', 'duration', other details
+            b. this does NOT config the actual appearance
+                i. @keyframes does this 
+            c. Sub-Properties: 
+                1. animation-name
+                    i. describes the name of the @keyframes at-rule 
+                2. animation-duration 
+                    i. seconds commonly
+                3. animation-timing-function
+                    i. acceleration curves
+                4. animation-delay 
+                5. animation-iteration-count 
+                    i. repeat count 
+                    ii. 'infinite' is a static value 
+                6. animation-direction
+                    i. specifies whether the animation direction should alternate
+                7. animation-fill-mode: 
+                    i. values that are applied by the animation before & after its executing
+                8. animation-play-state
+                    i. pause & resume animation sequence
+
+        2. Example: 
+            .main-box{
+                overflow: hidden;
+                width: 100vw;
+            }
+
+            p.slide-text{
+                animation-name: slide-text-in;
+                animation-duration: 3s;
+            }
+
+            @keyframes slide-text-in{
+                0% {
+                    /* hides the content off the edge of the page */
+                    margin-left: 100%;
+                    /* makes the content much longer than the width of the window */
+                    width: 300%;
+                }
+
+                100% {
+                    margin-left: 0%;
+                    width: 100%;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
