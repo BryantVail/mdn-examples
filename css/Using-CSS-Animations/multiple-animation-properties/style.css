@@ -1,0 +1,44 @@
+/* style.css,  */
+
+
+.main-viewport{
+    display: flex;
+}
+
+/* all named animations will have the same duration when there's only One value */
+.box-1{
+    background: lightskyblue;
+    /* size */
+        height: 100vh;
+        width: 10rem;
+    /* animation */
+        animation-name: fade-in-out, move-left-300px, bounce;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+}
+
+/*3 values for 3 named animations */
+.box-2{
+    background: tan;
+    /* size */
+        height: 82vh;
+        width: 15vw;
+    /* animation */
+        animation-name: fade-in-out, move-left-300px, bounce;
+        animation-duration: 2.5s, 5s, 1s;
+        animation-iteration-count: 2,1,5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
