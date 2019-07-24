@@ -1,0 +1,36 @@
+/* rotation-with-another-transform */
+
+div{
+    position: absolute;
+    top: 2.3rem;
+    left: 2.3rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    background: lightgray;
+}
+
+.rotate {
+    background: transparent;
+    outline: 2px dashed;
+    transform: rotate(45deg);
+}
+
+/* once rotated, the tranlated direction will change with the 'x' axis tilted */
+.rotate-translate{
+    background: pink;
+    transform: rotate(45deg) translateX(11.25rem);
+}
+
+.translate-rotate{
+    background: gold;
+    transform: translateX(11.25rem) rotate(45deg);
+}
+
+
+
+
+
+
+
+
+

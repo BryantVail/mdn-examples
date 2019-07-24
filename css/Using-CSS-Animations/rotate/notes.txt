@@ -1,0 +1,64 @@
+rotate() CSS Function: 
+    rotates around a fixed point on the 2D plane 
+        -without deforming it
+        -results in: <transform-function> data-type
+        fixed-point: 'transform-origin', 
+    syntax: 
+        'rotate(a)' where 'a' is an <angle>
+        positive-angle: 
+            clockwise-rotation
+        negative-angle: 
+            counter-clockwise 
+        
+
+_______________________________________________________________
+Examples: 
+
+simple example: 
+    .rotated{
+        transform: rotate(45deg); /* equal to rotateZ(45deg) */
+        background: pink;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

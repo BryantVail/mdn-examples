@@ -1,0 +1,24 @@
+/* rotate */
+
+div{
+    width: 5rem;
+    height: 5rem;
+    background: skyblue;
+}
+
+.rotated{
+    transform: rotate(45deg); /* equal to rotateZ(45deg) */
+    background: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
