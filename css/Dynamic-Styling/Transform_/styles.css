@@ -1,0 +1,6 @@
+div {
+  border: solid #333;
+  transform: translate(30px, 20px) /*x: 30px, y: 20px*/ rotate(30deg);
+  width: 140px;
+  height: 60px;
+}

@@ -1,0 +1,17 @@
+div {
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
+}
+
+.moved {
+  transform: translate(10px); /*equal to translateX(10px)*/
+  background: pink;
+}
+
+.moved-x-and-y {
+  /* equal to translateX(10px) translateY(10px) */
+  transform: translate(10px, 10px);
+  background: #333;
+  color: white;
+}

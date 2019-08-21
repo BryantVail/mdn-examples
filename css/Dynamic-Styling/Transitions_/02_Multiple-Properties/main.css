@@ -1,0 +1,15 @@
+.box {
+  border: 1px solid #ccc;
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: #f4f4f4;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+  background: #ffcccc;
+  width: 400px;
+  height: 200px;
+  transform: rotate(360deg);
+}

@@ -1,0 +1,20 @@
+#delay {
+  font-size: 1rem;
+  transition: font-size 4s linear 1s;
+  /* 
+  transition-property: font-size;
+  
+  
+  transition-duration: 4s;
+  timing-function: linear;
+  transition-delay: 2s;
+
+  */
+  cursor: pointer;
+  height: 100px;
+  width: 200px;
+  /* background: lightseagreen; */
+}
+#delay:hover {
+  font-size: 40px;
+}
